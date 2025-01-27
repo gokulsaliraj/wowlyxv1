@@ -1,21 +1,21 @@
 "use client";
 import { ReactSVG } from 'react-svg'; // Importing react-svg to handle the SVG as a React component
 import cogImage from "@/assets/rb_29187.png";
+import arrowRightSvg from '@/assets/arrow-right.svg';
 
 import {
   motion,
-  useScroll,
-  useTransform,
+
 } from "framer-motion";
 import { useRef } from "react";
 
 export const Hero = () => {
   const heroRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start end", "end start"],
-  });
-  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+  // const { scrollYProgress } = useScroll({
+  //   target: heroRef,
+  //   offset: ["start end", "end start"],
+  // });
+  // const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
   return (
     <section
@@ -37,7 +37,7 @@ export const Hero = () => {
               <button className="btn btn-text gap-1">
                 <span>Learn more</span>
                 {/* Use ReactSVG for rendering the SVG as a component */}
-                <ReactSVG src={require('@/assets/arrow-right.svg')} className="h-5 w-5" />
+                <ReactSVG src={arrowRightSvg} className="h-5 w-5" />
               </button>
             </div>
           </div>
