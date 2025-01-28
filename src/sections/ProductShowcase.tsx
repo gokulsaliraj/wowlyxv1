@@ -14,7 +14,7 @@ export const ProductShowcase = () => {
   });
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
   return (
-    <section 
+    <section id="features"
       ref={sectionRef}
       className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip"
     >
@@ -54,9 +54,6 @@ export const ProductShowcase = () => {
             }}
           />
         </div>
-        <section id="why">
-
-        </section>
       </div>
     </section>
     

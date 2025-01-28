@@ -30,8 +30,8 @@ const benefits = [
 ];
 
 export const WowlyxDetails = () => {
-  return (
-    <section className="py-24 bg-gray-50">
+  return (  
+    <section id="why" className="py-24 bg-gray-50">
       <div className="container mx-auto">
         {/* Core Benefits Section */}
         <div className="">

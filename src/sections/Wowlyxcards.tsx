@@ -87,7 +87,6 @@ export const SimpleSwiper = () => {
           ))}
         </Swiper>
       </div>
-      <section id="pricing"></section>
     </section>
   );
 };
