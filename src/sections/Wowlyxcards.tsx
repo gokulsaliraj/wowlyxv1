@@ -41,7 +41,8 @@ export const SimpleSwiper = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip">
+
+    <section  className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip">
       <div className="container mx-auto">
         {/* Section heading */}
         <div className="section-heading text-center">
@@ -86,6 +87,7 @@ export const SimpleSwiper = () => {
           ))}
         </Swiper>
       </div>
+      <section id="pricing"></section>
     </section>
   );
 };

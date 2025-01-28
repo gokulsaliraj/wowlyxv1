@@ -18,7 +18,7 @@ export const Hero = () => {
   // const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
   return (
-    <section
+    <section id="about"
       ref={heroRef}
       className="pt-8 pb-20 md:pt-5 md:pb-10 bg-white overflow-x-clip"
     >

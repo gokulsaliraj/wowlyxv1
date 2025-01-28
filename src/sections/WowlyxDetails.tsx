@@ -7,25 +7,25 @@ const benefits = [
     title: "Enhanced Security",
     description:
       "Proactive threat detection, real-time alerts, and automated incident response to enhance safety and security.",
-    icon: <FaShieldAlt className="text-3xl text-blue-500" />,
+    icon: <FaShieldAlt className="text-3xl text-black-500" />,
   },
   {
     title: "Improved Efficiency",
     description:
       "Streamlined operations, automated tasks, and optimized resource allocation for improved productivity and cost savings.",
-    icon: <FaCog className="text-3xl text-green-500" />,
+    icon: <FaCog className="text-3xl text-black-500" />,
   },
   {
     title: "Customizable Solutions",
     description:
       "Tailored solutions to meet specific needs and requirements, adapting to different industries and environments.",
-    icon: <FaCube className="text-3xl text-yellow-500" />,
+    icon: <FaCube className="text-3xl text-black-500" />,
   },
   {
     title: "Privacy Protection",
     description:
       "Data anonymization, secure storage, and strict adherence to privacy regulations to safeguard sensitive information.",
-    icon: <FaLock className="text-3xl text-red-500" />,
+    icon: <FaLock className="text-3xl text-black-500" />,
   },
 ];
 
@@ -55,6 +55,7 @@ export const WowlyxDetails = () => {
           </div>
         </div>
       </div>
+      <section id="variants"></section>
     </section>
   );
 };

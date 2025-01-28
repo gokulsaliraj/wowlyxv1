@@ -14,14 +14,14 @@ export const ProductShowcase = () => {
   });
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
   return (
-    <section
+    <section 
       ref={sectionRef}
       className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip"
     >
-      <div className="container">
+      <div  className="container">
         <div className="section-heading">
           <div className="flex justify-center">
-            <div className="tag">AI-Powered Vision Intelligence System</div>
+            <div className="tag"  >AI-Powered Vision Intelligence System</div>
           </div>
           <h2 className="section-title mt-5 bg-gradient-to-b from-black to-[#4b4c4e]">
             Wowlyx turns visuals into insights with AI Powerd analytics
@@ -43,7 +43,7 @@ export const ProductShowcase = () => {
               translateY,
             }}
           />
-          <motion.img
+          <motion.img 
             src={tubeImage.src}
             alt="Tube image"
             height={248}
@@ -54,7 +54,11 @@ export const ProductShowcase = () => {
             }}
           />
         </div>
+        <section id="why">
+
+        </section>
       </div>
     </section>
+    
   );
 };

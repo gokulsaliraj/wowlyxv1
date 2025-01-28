@@ -3,6 +3,7 @@ import { CheckCircleIcon } from "@heroicons/react/solid";  // Ensure this import
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
 
+
 const pricingTiers = [
   {
     title: "Basic",
