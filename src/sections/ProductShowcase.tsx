@@ -1,7 +1,7 @@
 "use client";
 import productImage from "@/assets/e30c4ad7cf69ca97bafccd08b1403599961e9d3d_2_999x750.jpeg";
-import pyramidImage from "@/assets/pyramid.png";
-import tubeImage from "@/assets/tube.png";
+import pyramidImage from "@/assets/412397990_e7033633-fa32-4d36-b490-8b6d32a8d516-removebg-preview.png";
+import tubeImage from "@/assets/412397962_221f6e1f-8a05-43fb-b701-15e0ca8f7ea6-removebg-preview (1).png";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -14,9 +14,9 @@ export const ProductShowcase = () => {
   });
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
   return (
-    <section id="features"
+    <section 
       ref={sectionRef}
-      className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip"
+      className="bg-white"
     >
       <div  className="container">
         <div className="section-heading">

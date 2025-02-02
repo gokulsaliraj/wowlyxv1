@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="relative">
-      <body className={twMerge(dmSans.className, "antialiased bg-[#EAEEFE]")}>
+      <body className={twMerge(dmSans.className, "antialiased bg-[#e2e2e2]")}>
         {children}
       </body>
     </html>

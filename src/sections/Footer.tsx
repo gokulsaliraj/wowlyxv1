@@ -52,7 +52,7 @@ export const Footer = () => {
             smooth={true}
             duration={500}
             className="hover:text-white transition cursor-pointer"
-          >
+          >  
             Variants
           </Link>
           <Link
