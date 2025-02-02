@@ -14,9 +14,9 @@ export const ProductShowcase = () => {
   });
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
   return (
-    <section 
+    <section  id="features"
       ref={sectionRef}
-      className="bg-white"
+      className="py-32 bg-white"
     >
       <div  className="container">
         <div className="section-heading">
