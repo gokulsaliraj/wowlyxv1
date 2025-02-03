@@ -9,6 +9,7 @@ import { Footer } from "@/sections/Footer";
 
 
 
+
 export default function Home() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function Home() {
       <SimpleSwiper/>
       <Pricing />
       <Footer />
+      
     </>
   );
 }

@@ -37,6 +37,11 @@
 
   .card {
     @apply p-10 border border-[#222222]/10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full;
+    
+  }.reverse-animation {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  
 }
 

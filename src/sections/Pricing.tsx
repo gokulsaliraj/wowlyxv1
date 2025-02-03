@@ -131,9 +131,8 @@
 //     </section>
 //   );
 // };
-
 "use client";
-import { CheckCircleIcon } from "@heroicons/react/solid";  // Ensure this import
+import { CheckCircleIcon } from "@heroicons/react/solid";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
 
@@ -181,84 +180,84 @@ const pricingTiers = [
 
 export const Pricing = () => {
   return (
-    <section id="pricing" className="py-32 bg-white"> {/* Increased py-24 to py-32 */}
+    <section id="pricing" className="py-32 bg-white">
       <div className="container">
-        <div className="section-heading">
+        <motion.div
+          className="section-heading"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 1 }}
+        >
           <h2 className="section-title">Pricing</h2>
           <p className="section-description mt-5">
-            Choose the plan that fits your security needs. Upgrade for advanced
-            analytics, AI-driven patrolling, and complete IoT integration.
+            Choose the plan that fits your security needs. Upgrade for advanced analytics, AI-driven patrolling, and complete IoT integration.
           </p>
-        </div>
+        </motion.div>
+
         <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
-          {pricingTiers.map(
-            (
-              { title, monthlyPrice, buttonText, popular, inverse, features },
-              index
-            ) => (
-              <div
-                key={index}
-                className={twMerge(
-                  "card p-6 rounded-lg shadow-lg flex flex-col justify-between min-h-[32rem] w-80",
-                  inverse && "border-black bg-black text-white"
+          {pricingTiers.map(({ title, monthlyPrice, buttonText, popular, inverse, features }, index) => (
+            <motion.div
+              key={index}
+              className={twMerge(
+                "card p-6 rounded-lg shadow-lg flex flex-col justify-between min-h-[32rem] w-80 transition-transform",
+                inverse && "border-black bg-black text-white"
+              )}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }} // Scale up on hover
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+            >
+              {/* Card Header */}
+              <div className="flex justify-between">
+                <h3 className={twMerge("text-lg font-bold text-black/50", inverse && "text-white/60")}>{title}</h3>
+                {popular && (
+                  <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20">
+                    <motion.span
+                      animate={{ backgroundPositionX: "100%" }}
+                      transition={{ duration: 1, repeat: Infinity, ease: "linear", repeatType: "loop" }}
+                      className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] [background-size:200%] text-transparent bg-clip-text font-medium"
+                    >
+                      Popular
+                    </motion.span>
+                  </div>
                 )}
-              >
-                <div className="flex justify-between">
-                  <h3
-                    className={twMerge(
-                      "text-lg font-bold text-black/50",
-                      inverse && "text-white/60"
-                    )}
-                  >
-                    {title}
-                  </h3>
-                  {popular && (
-                    <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20">
-                      <motion.span
-                        animate={{
-                          backgroundPositionX: "100%",
-                        }}
-                        transition={{
-                          duration: 1,
-                          repeat: Infinity,
-                          ease: "linear",
-                          repeatType: "loop",
-                        }}
-                        className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] [background-size:200%] text-transparent bg-clip-text font-medium"
-                      >
-                        Popular
-                      </motion.span>
-                    </div>
-                  )}
-                </div>
-                <div className="flex items-baseline gap-1 mt-6">
-                  <span className="text-4xl font-bold tracking-tighter leading-none">
-                    ${monthlyPrice}
-                  </span>
-                  <span className="tracking-tight font-bold text-black/50">
-                    /month
-                  </span>
-                </div>
-                <button
-                  className={twMerge(
-                    "btn btn-primary w-full mt-6",
-                    inverse && "bg-white text-black"
-                  )}
-                >
-                  {buttonText}
-                </button>
-                <ul className="flex flex-col gap-5 mt-8">
-                  {features.map((feature, i) => (
-                    <li key={i} className="text-sm flex items-center gap-4">
-                      {/* Ensure CheckCircleIcon is used properly */}
-                      <CheckCircleIcon className="h-6 w-6 text-green-500" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
-            )
-          )}
+
+              {/* Pricing */}
+              <div className="flex items-baseline gap-1 mt-6">
+                <span className="text-4xl font-bold tracking-tighter leading-none">${monthlyPrice}</span>
+                <span className="tracking-tight font-bold text-black/50">/month</span>
+              </div>
+
+              {/* CTA Button with Animation */}
+              <motion.button
+                className={twMerge("btn btn-primary w-full mt-6", inverse && "bg-white text-black")}
+                whileHover={{ scale: 1.1 }} // Slight scale effect on hover
+                whileTap={{ scale: 0.95 }} // Click effect
+              >
+                {buttonText}
+              </motion.button>
+
+              {/* Features List */}
+              <ul className="flex flex-col gap-5 mt-8">
+                {features.map((feature, i) => (
+                  <motion.li
+                    key={i}
+                    className="text-sm flex items-center gap-4"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false, amount: 0.2 }}
+                    transition={{ duration: 0.8, delay: i * 0.1 }}
+                  >
+                    <CheckCircleIcon className="h-6 w-6 text-green-500" />
+                    <span>{feature}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
